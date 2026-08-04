@@ -54,3 +54,17 @@ text | The protocol's own required blocks total ~477 words on a full session,
 so a budget covering them would forbid briefing, deciding, and saving state in
 one sitting | Reverses if: block formats shrink enough that a full session
 fits under 400 words in total
+
+2026-08-04 | The orchestration runtime is a plain Python loop over the Messages
+API, not LangGraph | The protocol blocks already are the message schema, so the
+routing logic is a parser and a dict — LangGraph would add a dependency and a
+graph DSL without removing any of that work | Reverses if: the loop needs
+durable checkpointing, human-in-the-loop resume, or fan-out across more than a
+handful of agents
+
+2026-08-04 | Each agent holds its own message history in the runtime, rather
+than sharing one transcript | A specialist that has seen Chief of Staff's
+framing tags things [INFERRED] that it should call [UNKNOWN], in good faith,
+which destroys the one discipline the system rests on | Reverses if: agents are
+observed failing for want of context that a self-contained TASK BRIEF genuinely
+cannot carry

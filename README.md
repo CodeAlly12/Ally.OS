@@ -22,6 +22,8 @@ allyos/
 ├── state/
 │   ├── projects.md        current state, four lines per project
 │   └── decisions.md       append-only decision log
+├── runtime/               orchestration runtime — agents call each other
+├── deploy/custom-gpt/     paste-ready Custom GPT instruction files
 └── runs/                  session transcripts
 ```
 
@@ -48,9 +50,15 @@ field, which the agent file plus the whole protocol overflows, so
 blocks that agent uses. See `deploy/custom-gpt/README.md` for names,
 descriptions, conversation starters, and capability settings.
 
-**LangGraph** — not yet built. When it is, each agent file becomes a node's
-system prompt and the blocks in `PROTOCOL.md` become the state schema passed
-between nodes. No prompt changes required.
+**The runtime** — `runtime/allyos.py` runs the whole loop over the Claude API,
+with no human in the middle: it loads these same agent files, routes TASK
+BRIEFs and RESULT PACKETs between agents automatically, audits claim tags, and
+stops when a decision needs you. `--search` gives Research Analyst the web. See
+`runtime/README.md`.
+
+**LangGraph** — not yet built, and less urgent now that the runtime exists.
+Each `Agent` becomes a node and the blocks are already the message schema. No
+prompt changes required.
 
 ## The paste loop
 
