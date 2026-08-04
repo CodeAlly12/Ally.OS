@@ -34,16 +34,21 @@ For each agent:
 
 ## Per-agent configuration
 
+Four starters per agent, which is the cap. They render as clickable cards and
+truncate, so each is short and front-loads the verb. Every one of them is
+something the agent's own file permits — a starter that invites an agent past
+its scope boundaries teaches you to distrust the boundaries.
+
 ### AllyOS — Chief of Staff
 
 - **Description:** Turns vague intent into one task brief or one decision.
   Routes work to specialists and keeps project state.
 - **Instructions:** `chief_of_staff.txt`
-- **Conversation starters:**
-  - Here is my state — [paste projects.md and decisions.md]
-  - I want to build [thing]. Where do we start?
-  - Result packet back from Research Analyst — [paste]
-  - End the session and give me the state diff
+- **Conversation starters** — one for each position you occupy in the loop:
+  - `Here is my state — [paste projects.md and decisions.md]`
+  - `I want to build [thing]. Where do we start?`
+  - `Result packet back — [paste]`
+  - `End the session and give me the state diff`
 
 ### AllyOS — Research Analyst
 
@@ -51,8 +56,10 @@ For each agent:
   confidence. Never recommends, never invents a source.
 - **Instructions:** `research_analyst.txt`
 - **Conversation starters:**
-  - [Paste a TASK BRIEF]
-  - What would it take to verify the unknowns in your last packet?
+  - `[Paste a TASK BRIEF]`
+  - `What would settle the [UNKNOWN]s in your last packet?`
+  - `Re-audit your tags — any [VERIFIED] without a named source?`
+  - `Which of your findings should change my mind?`
 
 ### AllyOS — Engineering Lead
 
@@ -60,8 +67,10 @@ For each agent:
   honest ranges, the three ways it breaks in production.
 - **Instructions:** `engineering_lead.txt`
 - **Conversation starters:**
-  - [Paste a TASK BRIEF]
-  - What would you cut if the timeline halved?
+  - `[Paste a TASK BRIEF]`
+  - `What is the thinnest version that still ships?`
+  - `What would you cut if the timeline halved?`
+  - `Where does this break in production?`
 
 ### AllyOS — Knowledge Manager
 
@@ -69,8 +78,10 @@ For each agent:
   contradictions, keeps the decision log append-only.
 - **Instructions:** `knowledge_manager.txt`
 - **Conversation starters:**
-  - [Paste a TASK BRIEF plus the current state file]
-  - What did we decide about [topic], and what would reverse it?
+  - `[Paste a TASK BRIEF plus the current state file]`
+  - `What did we decide about [topic], and what would reverse it?`
+  - `Here is tonight's session — file it as a state diff`
+  - `Does anything here contradict decisions.md?`
 
 ## Knowledge files
 
