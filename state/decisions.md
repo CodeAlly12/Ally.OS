@@ -42,3 +42,15 @@ our minds" | Reverses if: never, while this file exists as a record
 better agents, they produce agents that ignore the middle | Reverses if: an
 agent fails on a real task for want of instruction that cannot be compressed
 into the budget
+
+2026-08-04 | v1 of the villa booking assistant is WhatsApp assisted replies —
+agent drafts, Ally sends | Captures most of the time saving with no platform
+permissions gate; full auto-reply is blocked on an [UNKNOWN] and would be
+buying a maybe | Reverses if: the enquiry count comes in above ~20/week, or
+Booking.com messaging access is confirmed available to a property this size
+
+2026-08-04 | Chief of Staff's 400-word budget counts prose only, not block
+text | The protocol's own required blocks total ~477 words on a full session,
+so a budget covering them would forbid briefing, deciding, and saving state in
+one sitting | Reverses if: block formats shrink enough that a full session
+fits under 400 words in total

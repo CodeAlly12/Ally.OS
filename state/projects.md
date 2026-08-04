@@ -19,14 +19,12 @@ Last reviewed: 2026-08-04
 
 ## Villa booking assistant (Malindi portfolio)
 
-- **State:** Objective raised 2026-08-04. Options costed, decision pending
-  with Ally. See `runs/2026-08-04-booking-assistant.md`.
+- **State:** v1 shape decided 2026-08-04 — WhatsApp assisted replies, Ally
+  sends. Not started. See `runs/2026-08-04-booking-assistant.md`.
 - **Owner:** Ally
-- **Next action:** Answer the DECISION REQUIRED at the end of the 2026-08-04
-  run — v1 shape.
-- **Blocker:** `[UNKNOWN]` — which channel manager or PMS the portfolio runs
-  on today, and whether it exposes an API. Everything downstream of that is
-  an estimate on sand.
+- **Next action:** Count one week of enquiries by channel, from 2026-08-04.
+- **Blocker:** None for v1. Option B stays blocked on `[UNKNOWN]`
+  Booking.com messaging API eligibility for a property this size.
 
 ---
 
