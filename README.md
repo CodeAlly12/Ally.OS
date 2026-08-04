@@ -41,12 +41,12 @@ Knowledge. Chief of Staff also gets `state/projects.md` and
 `state/decisions.md` in Knowledge; refresh those uploads whenever you apply a
 STATE DIFF, or it will read last month's world.
 
-**ChatGPT Custom GPTs** — create one GPT per agent. Paste the agent file into
-Instructions, then append the contents of `PROTOCOL.md` below it under a
-`## Protocol` heading, since Custom GPT instructions are a single field. Upload
-the state files as Knowledge for Chief of Staff. Leave web browsing off unless
-you want Research Analyst producing `[VERIFIED]` tags — the tag rules assume
-no live retrieval by default and the agent will say so.
+**ChatGPT Custom GPTs** — one GPT per agent, built from the paste-ready files
+in `deploy/custom-gpt/`. Instructions there are a single 8,000-character
+field, which the agent file plus the whole protocol overflows, so
+`deploy/custom-gpt/build.py` generates one text per agent carrying only the
+blocks that agent uses. See `deploy/custom-gpt/README.md` for names,
+descriptions, conversation starters, and capability settings.
 
 **LangGraph** — not yet built. When it is, each agent file becomes a node's
 system prompt and the blocks in `PROTOCOL.md` become the state schema passed
